@@ -2,9 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.compose.compiler)
-    kotlin("plugin.serialization")
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.dagger.hilt)
-    id("com.google.gms.google-services")
+    alias(libs.plugins.gms.google.services)
     alias(libs.plugins.google.devtools.ksp)
 }
 
@@ -45,16 +45,15 @@ android {
         }
 
         debug {
-            //applicationIdSuffix = ".debug"
             isDebuggable = true
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -88,31 +87,31 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation("androidx.navigation:navigation-compose:2.8.9")
+    implementation(libs.androidx.navigation.compose)
 
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
+    implementation(libs.kotlinx.serialization.json)
 
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
+    implementation(libs.accompanist.systemuicontroller)
 
-    implementation("org.orbit-mvi:orbit-core:9.0.0")
-    implementation("org.orbit-mvi:orbit-viewmodel:9.0.0")
-    implementation("org.orbit-mvi:orbit-compose:9.0.0")
+    implementation(libs.orbit.core)
+    implementation(libs.orbit.viewmodel)
+    implementation(libs.orbit.compose)
 
-    implementation("com.google.dagger:hilt-android:2.51.1")
-    ksp("com.google.dagger:hilt-android-compiler:2.51.1")
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
 
-    implementation("androidx.datastore:datastore-preferences:1.1.2")
+    implementation(libs.androidx.datastore.preferences)
 
-    implementation("com.airbnb.android:lottie-compose:6.6.3")
+    implementation(libs.lottie.compose)
 
-    implementation(platform("com.google.firebase:firebase-bom:33.11.0"))
-    implementation("com.google.firebase:firebase-analytics")
-    implementation("com.google.firebase:firebase-messaging:24.1.1")
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.messaging)
 
-    implementation("com.blankj:utilcodex:1.31.1")
+    implementation(libs.utilcodex)
 
-    implementation("com.datadoghq:dd-sdk-android-rum:2.19.2")
+    implementation(libs.dd.sdk.android.rum)
 
     implementation(project(":core:kds"))
 }
