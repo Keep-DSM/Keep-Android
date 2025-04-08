@@ -44,7 +44,7 @@ class SplashViewModel @Inject constructor(
         val isNew = dataStore.data.map { preferences ->
             preferences[PreferencesKey.IS_NEW]
         }.firstOrNull()
-        reduce { state.copy(isNew = isNew ?: false) }
+        reduce { state.copy(isNew = isNew ?: true) }
     }
 
     private fun getLockTime() = intent {
