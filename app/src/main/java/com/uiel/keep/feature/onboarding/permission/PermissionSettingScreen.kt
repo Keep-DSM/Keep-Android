@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -41,13 +42,13 @@ fun PermissionSettingScreen(
         ) {
             Text(
                 modifier = Modifier.padding(top = 36.dp),
-                text = "접근성 권한이 꼭 필요해요!",
+                text = stringResource(id = R.string.accessibility_permission_required),
                 fontWeight = FontWeight.Bold,
                 fontSize = 22.sp,
             )
             Spacer(modifier = Modifier.height(12.dp))
             Text(
-                text = "접근성 권한으로 우리를 유혹하는\n모든 앱 사용을 막을 수 있어요."
+                text = stringResource(id = R.string.accessibility_permission_description)
             )
             Row(
                 modifier = Modifier.padding(top = 36.dp),
@@ -59,12 +60,12 @@ fun PermissionSettingScreen(
                     contentDescription = null,
                 )
                 Text(
-                    text = "권한은 앱 사용을 막을 때만 사용"
+                    text = stringResource(id = R.string.permission_usage_note)
                 )
             }
             Spacer(modifier = Modifier.weight(1f))
             KeepButton(
-                text = "권한 허용하기",
+                text = stringResource(id = R.string.allow_permission),
                 onClick = {
                     if(hasAccessibilityPermission(context)) {
                         onNavigateNotificationSetting()

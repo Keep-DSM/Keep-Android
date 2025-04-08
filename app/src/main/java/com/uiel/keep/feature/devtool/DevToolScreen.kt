@@ -25,11 +25,11 @@ fun DevToolScreen(
             modifier = Modifier.fillMaxSize().padding(paddingValues)
         ) {
             DevToolItem(
-                title = "기기 ID",
+                title = "Device ID",
                 content = deviceId(),
             )
             DevToolItem(
-                title = "fcm 토큰",
+                title = "FCM Token",
                 content = uiState.fcmToken,
             )
         }

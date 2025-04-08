@@ -39,7 +39,7 @@ fun IntroScreen(
         ) {
             Text(
                 modifier = Modifier.padding(top = 48.dp),
-                text = stringResource(R.string.onboarding_intro_title),
+                text = stringResource(id = R.string.intro_text),
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 18.sp,
             )
@@ -49,7 +49,7 @@ fun IntroScreen(
                 iterations = LottieConstants.IterateForever,
             )
             KeepButton(
-                text = stringResource(R.string.start),
+                text = stringResource(id = R.string.start_button),
                 onClick = onNavigatePermissionSetting,
             )
         }

@@ -27,6 +27,7 @@ import com.uiel.keep.R
 import com.uiel.keep.feature.home.component.CategoryBottomSheetContent
 import kotlinx.coroutines.launch
 import org.orbitmvi.orbit.compose.collectAsState
+import androidx.compose.ui.res.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -77,14 +78,14 @@ fun SelectAppScreen(
         ) {
             Text(
                 modifier = Modifier.padding(top = 36.dp),
-                text = "이제 당신을 유혹하는 앱을\n선택해주세요",
+                text = stringResource(id = R.string.select_apps_prompt),
                 fontWeight = FontWeight.SemiBold,
                 lineHeight = 28.sp,
                 fontSize = 22.sp,
             )
             Text(
                 modifier = Modifier.padding(top = 14.dp),
-                text = "선택한 앱은 더 이상 사용되지 못하도록\n지키자가 앱 사용을 잠가드려요.\n앱 잠금은 언제든지 끄고 켤 수 있어요.",
+                text = stringResource(id = R.string.app_lock_info),
                 color = Color.Gray,
             )
             LottieAnimation(
@@ -93,7 +94,7 @@ fun SelectAppScreen(
                 iterations = LottieConstants.IterateForever,
             )
             KeepButton(
-                text = "앱 선택하기",
+                text = stringResource(id = R.string.select_apps_button),
                 onClick = viewModel::showCategoryBottomSheet,
             )
         }

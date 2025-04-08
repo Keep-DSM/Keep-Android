@@ -36,6 +36,7 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -64,14 +65,14 @@ fun CategoryBottomSheetContent(
     ) {
         Spacer(modifier = Modifier.padding(top = 40.dp))
         Text(
-            text = "활동 선택",
+            text = stringResource(R.string.activity_selection),
             fontWeight = FontWeight.Bold,
             fontSize = 32.sp,
         )
         Spacer(modifier = Modifier.height(12.dp))
         SearchTextField(
             value = { searchContent },
-            hint = "검색",
+            hint = stringResource(R.string.search),
             onValueChange = { searchContent = it }
         )
         Spacer(modifier = Modifier.height(12.dp))
@@ -106,7 +107,7 @@ fun CategoryBottomSheetContent(
                             contentDescription = null,
                         )
                         Text(
-                            text = "전체 앱",
+                            text = stringResource(R.string.all_apps),
                         )
                     }
                 }
@@ -154,7 +155,7 @@ fun CategoryBottomSheetContent(
             contentPadding = PaddingValues(vertical = 18.dp)
         ) {
             Text(
-                text = "선택 완료",
+                text = stringResource(R.string.selection_complete),
                 fontWeight = FontWeight.Bold,
             )
         }

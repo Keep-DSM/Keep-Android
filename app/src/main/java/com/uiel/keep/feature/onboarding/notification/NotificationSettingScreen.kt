@@ -15,6 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -53,14 +54,14 @@ fun NotificationSettingScreen(
         ) {
             Text(
                 modifier = Modifier.padding(top = 36.dp),
-                text = "지키자와 함께 약속을 잘 지킬 수 있도록 알림을 허용해주세요.",
+                text = stringResource(id = R.string.notification_permission_request),
                 fontWeight = FontWeight.Bold,
                 lineHeight = 28.sp,
                 fontSize = 22.sp,
             )
             Spacer(modifier = Modifier.height(12.dp))
             Text(
-                text = "스마트폰 사용 습관이 잘 만들어질 수 있도록\n지키자가 알려드릴게요"
+                text = stringResource(id = R.string.notification_habit_message)
             )
             LottieAnimation(
                 modifier = Modifier
@@ -72,7 +73,7 @@ fun NotificationSettingScreen(
                 iterations = LottieConstants.IterateForever,
             )
             KeepButton(
-                text = "알림 권한 허용하기",
+                text = stringResource(id = R.string.allow_notification_permission),
                 onClick = {
                     requestPermissionLauncher.requestNotificationPermission()
                 },

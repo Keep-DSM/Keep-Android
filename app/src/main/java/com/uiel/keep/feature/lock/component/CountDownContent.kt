@@ -19,9 +19,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.uiel.keep.R
 import kotlinx.coroutines.delay
 import java.time.LocalDateTime
 import java.time.ZoneId
@@ -79,7 +81,7 @@ fun CountDownContent(
         }
         Spacer(modifier = Modifier.width(8.dp))
         Text(
-            text = "남음",
+            text = stringResource(id = R.string.remaining_time),
             fontWeight = FontWeight.SemiBold,
         )
     }

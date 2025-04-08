@@ -22,6 +22,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -99,13 +100,13 @@ fun LockScreen(
             ) {
                 val lockTime = uiState.lockTime
                 Text(
-                    text = "지키자가 꺼져 있어요",
+                    text = stringResource(id = R.string.lock_screen_off_message),
                     fontSize = 18.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = Color.Red,
                 )
                 Text(
-                    text = "${lockTime.hour}시 ${lockTime.minute}분까지 선택한 앱은 사용할 수 없어요",
+                    text = stringResource(id = R.string.lock_screen_unavailable_message, lockTime.hour, lockTime.minute),
                     color = Color.Gray,
                 )
             }

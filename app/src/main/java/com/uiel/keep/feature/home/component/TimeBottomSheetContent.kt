@@ -23,11 +23,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.uiel.keep.Picker
+import com.uiel.keep.R
 import com.uiel.keep.rememberPickerState
 import java.time.LocalTime
 
@@ -58,19 +60,20 @@ fun TimeBottomSheetContent(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = "종료 시간",
+                    text = stringResource(R.string.end_time),
                     fontWeight = FontWeight.SemiBold,
                 )
                 Spacer(modifier = Modifier.weight(1f))
                 if(LocalTime.now() > blockTime) {
                     Text(
-                        text = "다음날 ",
+                        modifier = Modifier.padding(end = 4.dp),
+                        text = stringResource(R.string.next_day),
                         color = Color(0xFFFE9E0B),
                         fontWeight = FontWeight.SemiBold
                     )
                 }
                 Text(
-                    text = "${blockTime.hour}시 ${blockTime.minute}분까지",
+                    text = stringResource(R.string.lock_time,blockTime.hour,blockTime.minute),
                     color = Color(0xFFFE9E0B),
                     fontWeight = FontWeight.SemiBold
                 )
@@ -87,7 +90,7 @@ fun TimeBottomSheetContent(
                     .fillMaxWidth()
                     .padding(top = 8.dp)
                     .padding(horizontal = 68.dp),
-                items = listOf("카운트다운", "타이머"),
+                items = listOf(stringResource(R.string.countdown), stringResource(R.string.timer)),
                 onItemSelection = { selectedIndex = it },
             )
             Crossfade(
@@ -104,7 +107,7 @@ fun TimeBottomSheetContent(
         }
         Spacer(modifier = Modifier.weight(1f))
         Text(
-            text = "시작 버튼을 누르면 선택한 시간까지 앱이 잠겨요",
+            text = stringResource(R.string.lock_message),
             color = Color.LightGray,
         )
         val hour = blockTime.minusHours(LocalTime.now().hour.toLong()).hour
@@ -125,8 +128,8 @@ fun TimeBottomSheetContent(
             onClick = onLockClick,
         ) {
             Text(
-                text = "${hour}시간 ${minute}분 동안 잠금 시간",
-                fontWeight = FontWeight.Bold,
+                text = stringResource(R.string.lock_duration,hour,minute),
+                fontWeight = FontWeight.Medium,
                 fontSize = 18.sp,
             )
         }

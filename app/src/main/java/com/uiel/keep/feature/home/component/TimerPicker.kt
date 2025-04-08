@@ -18,11 +18,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.uiel.keep.Picker
+import com.uiel.keep.R
 import com.uiel.keep.rememberPickerState
 import java.time.LocalTime
 
@@ -31,7 +34,8 @@ fun TimerPicker(
     modifier: Modifier = Modifier,
     onChangeTimerTime: (LocalTime) -> Unit,
 ) {
-    val timePeriodsValues = remember { listOf("오전","오후") }
+    val context = LocalContext.current
+    val timePeriodsValues = remember { listOf(context.getString(R.string.am),context.getString(R.string.pm)) }
     val hourValues = remember { (0..11).map { it.toString() } }
     val minuteValues = remember { (0..59).map { it.toString() } }
     val timerPeriodsPickerState = rememberPickerState()
@@ -40,7 +44,7 @@ fun TimerPicker(
 
     LaunchedEffect(timerPeriodsPickerState.selectedItem,hourPickerState.selectedItem,minutePickerState.selectedItem) {
         if(hourPickerState.selectedItem.isNotEmpty() && minutePickerState.selectedItem.isNotEmpty()) {
-            val hour = if(timerPeriodsPickerState.selectedItem == "오후") hourPickerState.selectedItem.toInt() + 12 else hourPickerState.selectedItem.toInt()
+            val hour = if(timerPeriodsPickerState.selectedItem == context.getString(R.string.pm)) hourPickerState.selectedItem.toInt() + 12 else hourPickerState.selectedItem.toInt()
             onChangeTimerTime(LocalTime.of(hour,minutePickerState.selectedItem.toInt()))
         }
     }

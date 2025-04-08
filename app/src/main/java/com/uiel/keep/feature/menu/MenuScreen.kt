@@ -48,7 +48,7 @@ fun MenuScreen(
             if (isTestMode()) {
                 MenuItem(
                     icon = R.drawable.laptop,
-                    title = "개발자 옵션",
+                    title = "Developer Options",
                     onClick = onNavigateDevTool,
                 )
             }
