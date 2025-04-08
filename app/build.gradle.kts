@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -8,6 +10,9 @@ plugins {
     alias(libs.plugins.google.devtools.ksp)
 }
 
+val properties = Properties()
+properties.load(rootProject.file("./local.properties").inputStream())
+
 android {
     namespace = "com.uiel.keep"
     compileSdk = 35
@@ -16,13 +21,24 @@ android {
         applicationId = "com.uiel.keep"
         minSdk = 28
         targetSdk = 34
-        versionCode = 1
-        versionName = "0.0.3"
+        versionCode = 2
+        versionName = "0.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        buildConfigField(
+            type = "String",
+            name = "DATA_DOG_CLIENT_TOKEN",
+            value = properties.getProperty("DATA_DOG_CLIENT_TOKEN")
+        )
+        buildConfigField(
+            type = "String",
+            name = "DATA_DOG_APPLICATION_ID",
+            value = properties.getProperty("DATA_DOG_APPLICATION_ID")
+        )
     }
     flavorDimensions += "server"
     productFlavors {
