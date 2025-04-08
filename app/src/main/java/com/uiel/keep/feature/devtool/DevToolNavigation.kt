@@ -13,8 +13,12 @@ fun NavController.navigateToDevTool(
     navOptions: NavOptions? = null
 ) = navigate(route = DevToolRoute, navOptions = navOptions)
 
-fun NavGraphBuilder.devToolScreen() {
+fun NavGraphBuilder.devToolScreen(
+    onNavigateBack: () -> Unit,
+) {
     composable<DevToolRoute> {
-        DevToolScreen()
+        DevToolScreen(
+            onNavigateBack = onNavigateBack,
+        )
     }
 }

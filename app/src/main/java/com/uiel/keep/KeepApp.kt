@@ -52,6 +52,6 @@ internal fun KeepApp(modifier: Modifier = Modifier) {
             onNavigateBack = navController::navigateUp
         )
         lockScreen(onNavigateHome = navController::navigateToHome)
-        devToolScreen()
+        devToolScreen(onNavigateBack = navController::navigateUp)
     }
 }
