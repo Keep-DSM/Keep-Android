@@ -36,7 +36,7 @@ fun MenuScreen(
                         )
                     }
                 },
-                title = { /*TODO*/ }
+                title = { }
             )
         }
     ) { paddingValues ->
