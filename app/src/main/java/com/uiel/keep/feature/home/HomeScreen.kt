@@ -264,7 +264,8 @@ fun HomeScreen(
                                         color = Color.DarkGray
                                     )
                                     .clickable(
-                                        onClick = viewModel::showTimeBottomSheet
+                                        onClick = viewModel::showTimeBottomSheet,
+                                        enabled = !uiState.isKeep,
                                     )
                                     .padding(4.dp),
                                 painter = painterResource(id = R.drawable.timer_outline),
