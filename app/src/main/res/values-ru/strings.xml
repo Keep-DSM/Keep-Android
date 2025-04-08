@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Keep</string>
+    <string name="accessibility_service_description">Служба доступности Keep</string>
+    <string name="select_apps_prompt">Пожалуйста, выберите приложения, которые вас соблазняют</string>
+    <string name="app_lock_info">Выбранные приложения будут заблокированы для предотвращения использования. Вы можете включать и выключать блокировку в любое время.</string>
+    <string name="select_apps_button">Выбрать приложения</string>
+    <string name="accessibility_permission_required">Разрешение на Время экрана необходимо!</string>
+    <string name="accessibility_permission_description">Разрешение на Время экрана может заблокировать все соблазняющие приложения.</string>
+    <string name="permission_usage_note">Разрешение используется только для блокировки использования приложений</string>
+    <string name="allow_permission">Разрешить доступ</string>
+    <string name="notification_permission_request">Пожалуйста, разрешите уведомления, чтобы помочь вам сдерживать обещания с Keep.</string>
+    <string name="notification_habit_message">Keep будет уведомлять вас, чтобы помочь выработать хорошие привычки использования смартфона.</string>
+    <string name="allow_notification_permission">Разрешить уведомления</string>
+    <string name="intro_text">Защищает вас от соблазнов вашего смартфона</string>
+    <string name="start_button">Начать</string>
+    <string name="lock_screen_off_message">Экран блокировки выключен</string>
+    <string name="lock_screen_unavailable_message">Выбранные приложения недоступны до %1$d:%2$d</string>
+    <string name="remaining_time">осталось</string>
+    <string name="activity_selection">Выбор активности</string>
+    <string name="search">поиск</string>
+    <string name="all_apps">Все приложения</string>
+    <string name="selection_complete">Выбор завершен</string>
+    <string name="keep_on_message">Выбранные приложения нельзя использовать, пока Keep активен</string>
+    <string name="keep_off_message">Включите Keep, чтобы заблокировать соблазняющие приложения</string>
+    <string name="keep_off_status">Keep выключен</string>
+    <string name="hour">Час</string>
+    <string name="minute">Минута</string>
+    <string name="end_time">Время окончания</string>
+    <string name="next_day">Следующий день</string>
+    <string name="lock_time">До %1$d часов %2$d минут</string>
+    <string name="lock_message">Приложения будут заблокированы до выбранного времени</string>
+    <string name="lock_duration">Заблокировано на %1$d часов %2$d минут</string>
+    <string name="countdown">Обратный отсчет</string>
+    <string name="timer">Таймер</string>
+    <string name="keep_during">Защита во время</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="category_selected">Выбрано %1$d приложений и веб-категорий</string>
+</resources> 

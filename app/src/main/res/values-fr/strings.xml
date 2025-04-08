@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Keep</string>
+    <string name="accessibility_service_description">Service d\'accessibilité Keep</string>
+    <string name="select_apps_prompt">Veuillez sélectionner les applications qui vous tentent</string>
+    <string name="app_lock_info">Les applications sélectionnées seront verrouillées pour empêcher leur utilisation. Vous pouvez activer et désactiver le verrouillage à tout moment.</string>
+    <string name="select_apps_button">Sélectionner les Apps</string>
+    <string name="accessibility_permission_required">L\'autorisation de Temps d\'écran est essentielle !</string>
+    <string name="accessibility_permission_description">L\'autorisation de Temps d\'écran peut bloquer toutes les applications qui nous tentent.</string>
+    <string name="permission_usage_note">L\'autorisation est utilisée uniquement pour bloquer l\'utilisation des applications</string>
+    <string name="allow_permission">Autoriser l\'accès</string>
+    <string name="notification_permission_request">Veuillez autoriser les notifications pour vous aider à tenir vos promesses avec Keep.</string>
+    <string name="notification_habit_message">Keep vous notifiera pour vous aider à développer de bonnes habitudes avec votre smartphone.</string>
+    <string name="allow_notification_permission">Autoriser les Notifications</string>
+    <string name="intro_text">Vous protéger des tentations de votre smartphone</string>
+    <string name="start_button">Commencer</string>
+    <string name="lock_screen_off_message">L\'écran de verrouillage est désactivé</string>
+    <string name="lock_screen_unavailable_message">Les applications sélectionnées ne sont pas disponibles jusqu\'à %1$d:%2$d</string>
+    <string name="remaining_time">restant</string>
+    <string name="activity_selection">Sélection d\'Activité</string>
+    <string name="search">rechercher</string>
+    <string name="all_apps">Toutes les Apps</string>
+    <string name="selection_complete">Sélection Terminée</string>
+    <string name="keep_on_message">Les applications sélectionnées ne peuvent pas être utilisées pendant que Keep est actif</string>
+    <string name="keep_off_message">Activez Keep pour bloquer les applications qui nous tentent</string>
+    <string name="keep_off_status">Keep est désactivé</string>
+    <string name="hour">Heure</string>
+    <string name="minute">Minute</string>
+    <string name="end_time">Heure de Fin</string>
+    <string name="next_day">Jour Suivant</string>
+    <string name="lock_time">Jusqu\'à %1$d heures %2$d minutes</string>
+    <string name="lock_message">Les applications seront verrouillées jusqu\'à l\'heure sélectionnée</string>
+    <string name="lock_duration">Verrouillé pendant %1$d heures %2$d minutes</string>
+    <string name="countdown">Compte à rebours</string>
+    <string name="timer">Minuteur</string>
+    <string name="keep_during">Protection pendant</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="category_selected">%1$d applications et catégories web sélectionnées</string>
+</resources> 

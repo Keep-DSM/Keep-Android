@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Keep</string>
+    <string name="accessibility_service_description">Keep Toegankelijkheidsdienst</string>
+    <string name="select_apps_prompt">Selecteer de apps die je verleiden</string>
+    <string name="app_lock_info">De geselecteerde apps worden vergrendeld om gebruik te voorkomen. Je kunt de app-vergrendeling op elk moment aan- en uitzetten.</string>
+    <string name="select_apps_button">Apps Selecteren</string>
+    <string name="accessibility_permission_required">Schermtijd toestemming is essentieel!</string>
+    <string name="accessibility_permission_description">Schermtijd toestemming kan alle verleidelijke apps blokkeren.</string>
+    <string name="permission_usage_note">Toestemming wordt alleen gebruikt om app-gebruik te blokkeren</string>
+    <string name="allow_permission">Toestemming geven</string>
+    <string name="notification_permission_request">Sta notificaties toe om je te helpen je beloftes met Keep na te komen.</string>
+    <string name="notification_habit_message">Keep zal je notificeren om goede smartphone-gewoontes te ontwikkelen.</string>
+    <string name="allow_notification_permission">Notificatie Toestemming Geven</string>
+    <string name="intro_text">Beschermt je tegen de verleidingen van je smartphone</string>
+    <string name="start_button">Start</string>
+    <string name="lock_screen_off_message">Het vergrendelscherm staat uit</string>
+    <string name="lock_screen_unavailable_message">Geselecteerde apps zijn niet beschikbaar tot %1$d:%2$d</string>
+    <string name="remaining_time">over</string>
+    <string name="activity_selection">Activiteit Selectie</string>
+    <string name="search">zoeken</string>
+    <string name="all_apps">Alle Apps</string>
+    <string name="selection_complete">Selectie Voltooid</string>
+    <string name="keep_on_message">Geselecteerde apps kunnen niet worden gebruikt terwijl Keep aan staat</string>
+    <string name="keep_off_message">Zet Keep aan om verleidelijke apps te blokkeren</string>
+    <string name="keep_off_status">Keep staat uit</string>
+    <string name="hour">Uur</string>
+    <string name="minute">Minuut</string>
+    <string name="end_time">Eindtijd</string>
+    <string name="next_day">Volgende Dag</string>
+    <string name="lock_time">Tot %1$d uur %2$d minuten</string>
+    <string name="lock_message">Apps worden vergrendeld tot de geselecteerde tijd</string>
+    <string name="lock_duration">Vergrendeld voor %1$d uur %2$d minuten</string>
+    <string name="countdown">Aftellen</string>
+    <string name="timer">Timer</string>
+    <string name="keep_during">Beschermen tijdens</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="category_selected">%1$d apps &amp; webcategorieën geselecteerd</string>
+</resources> 
