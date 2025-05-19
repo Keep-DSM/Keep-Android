@@ -37,4 +37,10 @@
     <string name="am">上午</string>
     <string name="pm">下午</string>
     <string name="category_selected">已选择%1$d个应用和网络类别</string>
+    <string name="keep_on_status">Keep已开启</string>
+    <string name="keep_turned_on">Keep已开启</string>
+    <string name="keep_turned_off">Keep已关闭</string>
+    <string name="block_screen_title">Keep正在阻止应用使用</string>
+    <string name="block_screen_message">%1$s因受限制而无法使用。</string>
+    <string name="block_screen_close">关闭</string>
 </resources> 

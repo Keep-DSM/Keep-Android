@@ -24,6 +24,8 @@
     <string name="keep_on_message">Выбранные приложения нельзя использовать, пока Keep активен</string>
     <string name="keep_off_message">Включите Keep, чтобы заблокировать соблазняющие приложения</string>
     <string name="keep_off_status">Keep выключен</string>
+    <string name="keep_turned_on">Keep был включен</string>
+    <string name="keep_turned_off">Keep был выключен</string>
     <string name="hour">Час</string>
     <string name="minute">Минута</string>
     <string name="end_time">Время окончания</string>
@@ -37,4 +39,8 @@
     <string name="am">AM</string>
     <string name="pm">PM</string>
     <string name="category_selected">Выбрано %1$d приложений и веб-категорий</string>
+    <string name="keep_on_status">Keep включен</string>
+    <string name="block_screen_title">Keep блокирует использование приложения</string>
+    <string name="block_screen_message">%1$s нельзя использовать, так как он ограничен.</string>
+    <string name="block_screen_close">Закрыть</string>
 </resources> 

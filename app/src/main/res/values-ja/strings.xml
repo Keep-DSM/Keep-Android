@@ -23,7 +23,9 @@
     <string name="selection_complete">選択完了</string>
     <string name="keep_on_message">Keepがオンの間は選択したアプリは使用できません</string>
     <string name="keep_off_message">Keepをオンにして誘惑となるアプリをブロックしましょう</string>
-    <string name="keep_off_status">Keepはオフです</string>
+    <string name="keep_off_status">Keepがオフです</string>
+    <string name="keep_turned_on">Keepがオンになりました</string>
+    <string name="keep_turned_off">Keepがオフになりました</string>
     <string name="hour">時間</string>
     <string name="minute">分</string>
     <string name="end_time">終了時間</string>
@@ -37,4 +39,8 @@
     <string name="am">午前</string>
     <string name="pm">午後</string>
     <string name="category_selected">%1$d個のアプリ&amp;ウェブカテゴリーを選択</string>
+    <string name="keep_on_status">Keepがオンです</string>
+    <string name="block_screen_title">Keepがアプリの使用を\nブロックしています</string>
+    <string name="block_screen_message">%1$sは制限されているため使用できません。</string>
+    <string name="block_screen_close">閉じる</string>
 </resources> 

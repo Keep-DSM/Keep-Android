@@ -22,7 +22,10 @@
     <string name="selection_complete">선택 완료</string>
     <string name="keep_on_message">지키자가 켜져 있는 동안 선택한 앱은 사용할 수 없어요</string>
     <string name="keep_off_message">지키자를 켜서 우리를 유혹하는 앱 사용을 막으세요</string>
+    <string name="keep_on_status">지키자가 켜져 있어요</string>
     <string name="keep_off_status">지키자가 꺼져 있어요</string>
+    <string name="keep_turned_on">지키자가 켜졌어요</string>
+    <string name="keep_turned_off">지키자가 꺼졌어요</string>
     <string name="hour">시간</string>
     <string name="minute">분</string>
     <string name="end_time">종료 시간</string>
@@ -36,4 +39,7 @@
     <string name="am">오전</string>
     <string name="pm">오후</string>
     <string name="category_selected">%1$d개의 앱&amp;웹 카테고리 선택됨</string>
+    <string name="block_screen_title">지키자가 앱 사용을\n막고 있어요</string>
+    <string name="block_screen_message">%1$s은(는) 제한되었기 때문에 사용할 수 없습니다.</string>
+    <string name="block_screen_close">닫기</string>
 </resources>

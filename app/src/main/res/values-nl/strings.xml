@@ -23,7 +23,9 @@
     <string name="selection_complete">Selectie Voltooid</string>
     <string name="keep_on_message">Geselecteerde apps kunnen niet worden gebruikt terwijl Keep aan staat</string>
     <string name="keep_off_message">Zet Keep aan om verleidelijke apps te blokkeren</string>
-    <string name="keep_off_status">Keep staat uit</string>
+    <string name="keep_off_status">Keep is uitgeschakeld</string>
+    <string name="keep_turned_on">Keep is ingeschakeld</string>
+    <string name="keep_turned_off">Keep is uitgeschakeld</string>
     <string name="hour">Uur</string>
     <string name="minute">Minuut</string>
     <string name="end_time">Eindtijd</string>
@@ -37,4 +39,8 @@
     <string name="am">AM</string>
     <string name="pm">PM</string>
     <string name="category_selected">%1$d apps &amp; webcategorieën geselecteerd</string>
+    <string name="keep_on_status">Keep is ingeschakeld</string>
+    <string name="block_screen_title">Keep blokkeert het gebruik van de app</string>
+    <string name="block_screen_message">%1$s kan niet worden gebruikt omdat het beperkt is.</string>
+    <string name="block_screen_close">Sluiten</string>
 </resources> 

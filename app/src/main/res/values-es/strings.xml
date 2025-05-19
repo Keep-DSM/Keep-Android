@@ -22,7 +22,9 @@
     <string name="selection_complete">Selection Complete</string>
     <string name="keep_on_message">Selected apps cannot be used while Keep is on</string>
     <string name="keep_off_message">Turn on Keep to block apps that tempt us</string>
-    <string name="keep_off_status">Keep is off</string>
+    <string name="keep_off_status">Keep está desactivado</string>
+    <string name="keep_turned_on">Keep se ha activado</string>
+    <string name="keep_turned_off">Keep se ha desactivado</string>
     <string name="hour">Hour</string>
     <string name="minute">Minute</string>
     <string name="end_time">End Time</string>
@@ -36,4 +38,8 @@
     <string name="am">AM</string>
     <string name="pm">PM</string>
     <string name="category_selected">%1$d apps &amp; web categories selected</string>
+    <string name="keep_on_status">Keep está activado</string>
+    <string name="block_screen_title">Keep está bloqueando el uso de la aplicación</string>
+    <string name="block_screen_message">%1$s no se puede usar porque está restringido.</string>
+    <string name="block_screen_close">Cerrar</string>
 </resources>

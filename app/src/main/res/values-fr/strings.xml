@@ -37,4 +37,10 @@
     <string name="am">AM</string>
     <string name="pm">PM</string>
     <string name="category_selected">%1$d applications et catégories web sélectionnées</string>
+    <string name="keep_on_status">Keep est activé</string>
+    <string name="keep_turned_on">Keep a été activé</string>
+    <string name="keep_turned_off">Keep a été désactivé</string>
+    <string name="block_screen_title">Keep bloque l\'utilisation de l\'application</string>
+    <string name="block_screen_message">%1$s ne peut pas être utilisé car il est restreint.</string>
+    <string name="block_screen_close">Fermer</string>
 </resources> 

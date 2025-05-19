@@ -23,7 +23,13 @@
     <string name="selection_complete">Selezione Completata</string>
     <string name="keep_on_message">Le applicazioni selezionate non possono essere utilizzate mentre Keep è attivo</string>
     <string name="keep_off_message">Attiva Keep per bloccare le applicazioni che ci tentano</string>
+    <string name="keep_on_status">Keep è attivo</string>
     <string name="keep_off_status">Keep è disattivato</string>
+    <string name="keep_turned_on">Keep è stato attivato</string>
+    <string name="keep_turned_off">Keep è stato disattivato</string>
+    <string name="block_screen_title">Keep sta bloccando l\'uso dell\'app</string>
+    <string name="block_screen_message">%1$s non può essere utilizzato perché è limitato.</string>
+    <string name="block_screen_close">Chiudi</string>
     <string name="hour">Ora</string>
     <string name="minute">Minuto</string>
     <string name="end_time">Ora di Fine</string>
