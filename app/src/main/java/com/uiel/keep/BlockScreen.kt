@@ -1,6 +1,7 @@
 package com.uiel.keep
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -19,11 +20,14 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.uiel.kds.KeepButton
+import com.uiel.kds.theme.KeepTheme
 
 @Composable
 fun BlockScreen(
@@ -35,7 +39,9 @@ fun BlockScreen(
     val packageManager = context.packageManager
 
     Column(
-        modifier = modifier.fillMaxSize(),
+        modifier = modifier
+            .fillMaxSize()
+            .background(KeepTheme.colors.background),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
@@ -52,8 +58,8 @@ fun BlockScreen(
             Image(
                 modifier = Modifier
                     .sizeIn(
-                        minHeight = 100.dp,
-                        minWidth = 100.dp,
+                        minHeight = 120.dp,
+                        minWidth = 120.dp,
                     )
                     .clip(
                         RoundedCornerShape(12.dp)
@@ -63,31 +69,25 @@ fun BlockScreen(
             )
             Spacer(modifier = Modifier.padding(top = 8.dp))
             Text(
-                text = "지키자가 앱 사용을\n막고 있어요",
+                text = stringResource(id = R.string.block_screen_title),
                 fontWeight = FontWeight.Bold,
                 lineHeight = 40.sp,
                 textAlign = TextAlign.Center,
                 fontSize = 32.sp,
+                color = KeepTheme.colors.onSurfaceVariant,
             )
             Spacer(modifier = Modifier.padding(top = 20.dp))
             Text(
-                text = "${appName}은(는) 제한되었기 때문에 사용할 수 없습니다.",
+                text = stringResource(id = R.string.block_screen_message, appName),
                 textAlign = TextAlign.Center,
+                color = KeepTheme.colors.surfaceVariant,
             )
         }
-        Button(
-            modifier = Modifier.padding(bottom = 20.dp),
+        KeepButton(
+            modifier = Modifier.padding(horizontal = 20.dp),
+            text = stringResource(id = R.string.block_screen_close),
             onClick = onClose,
-            colors = ButtonColors(
-                containerColor = Color(0xFFFE9E0B),
-                contentColor = Color.White,
-                disabledContentColor = Color(0xFFFE9E0B),
-                disabledContainerColor = Color.White,
-            ),
-            contentPadding = PaddingValues(horizontal = 68.dp, vertical = 16.dp),
-        ) {
-            Text(text = "닫기")
-        }
+        )
     }
 }
 
