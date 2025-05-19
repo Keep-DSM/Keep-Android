@@ -14,8 +14,9 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.uiel.kds.KeepCheckbox
 import com.uiel.keep.R
-import com.uiel.keep.ui.theme.KeepTheme
+import com.uiel.kds.theme.KeepTheme
 
 @Composable
 fun AppItem(
@@ -30,7 +31,7 @@ fun AppItem(
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Checkbox(
+        KeepCheckbox(
             checked = checked,
             onCheckedChange = onCheckedChange,
         )
@@ -41,6 +42,7 @@ fun AppItem(
         )
         Text(
             text = name,
+            color = KeepTheme.colors.onSurfaceVariant,
         )
     }
 }
