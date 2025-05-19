@@ -1,5 +1,10 @@
 import java.util.Properties
 
+buildscript {
+    dependencies {
+        classpath("com.datadoghq:dd-sdk-android-gradle-plugin:1.16.0")
+    }
+}
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -8,6 +13,7 @@ plugins {
     alias(libs.plugins.dagger.hilt)
     alias(libs.plugins.gms.google.services)
     alias(libs.plugins.google.devtools.ksp)
+    id("com.datadoghq.dd-sdk-android-gradle-plugin")
 }
 
 val properties = Properties()
@@ -21,7 +27,7 @@ android {
         applicationId = "com.uiel.keep"
         minSdk = 28
         targetSdk = 34
-        versionCode = 2
+        versionCode = 4
         versionName = "0.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -128,6 +134,9 @@ dependencies {
     implementation(libs.utilcodex)
 
     implementation(libs.dd.sdk.android.rum)
+    implementation("com.datadoghq:dd-sdk-android-session-replay:2.19.2")
+    implementation("com.datadoghq:dd-sdk-android-session-replay-material:2.19.2")
+    implementation("com.datadoghq:dd-sdk-android-session-replay-compose:2.19.2")
 
     implementation(project(":core:kds"))
 }
