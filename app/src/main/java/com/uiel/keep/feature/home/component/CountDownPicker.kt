@@ -23,6 +23,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.Picker
 import com.uiel.keep.R
 import com.uiel.keep.rememberPickerState
@@ -55,7 +56,7 @@ fun CountDownPicker(
                 .height(32.dp)
                 .background(
                     shape = RoundedCornerShape(8.dp),
-                    color = Color(0xFF282831),
+                    color = KeepTheme.colors.tertiary,
                 )
         ) {
 
@@ -70,7 +71,7 @@ fun CountDownPicker(
                 state = hourPickerState,
                 items = hourValues,
                 visibleItemsCount = 7,
-                color = Color.White,
+                color = KeepTheme.colors.onSurfaceVariant,
                 textStyle = TextStyle(
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 18.sp,
@@ -80,6 +81,7 @@ fun CountDownPicker(
             Text(
                 text = stringResource(R.string.hour),
                 fontWeight = FontWeight.Bold,
+                color = KeepTheme.colors.onSurfaceVariant,
             )
             Spacer(modifier = Modifier.width(12.dp))
             Picker(
@@ -87,7 +89,7 @@ fun CountDownPicker(
                 state = minutePickerState,
                 items = minuteValues,
                 visibleItemsCount = 7,
-                color = Color.White,
+                color = KeepTheme.colors.onSurfaceVariant,
                 textStyle = TextStyle(
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 18.sp,
@@ -97,6 +99,7 @@ fun CountDownPicker(
             Text(
                 text = stringResource(R.string.minute),
                 fontWeight = FontWeight.Bold,
+                color = KeepTheme.colors.onSurfaceVariant,
             )
         }
     }

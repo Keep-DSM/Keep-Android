@@ -6,12 +6,10 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.absoluteOffset
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.sizeIn
@@ -20,14 +18,13 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -37,7 +34,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.layout.LayoutCoordinates
 import androidx.compose.ui.layout.boundsInParent
@@ -46,6 +42,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -53,8 +50,9 @@ import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
+import com.uiel.kds.KeepModalBottomSheet
 import com.uiel.kds.KeepSnackBar
-import com.uiel.kds.RotatingCircleGradient
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.R
 import com.uiel.keep.feature.home.component.CategoryBottomSheetContent
 import com.uiel.keep.feature.home.component.CategoryButton
@@ -108,9 +106,9 @@ fun HomeScreen(
     }
 
     if (uiState.isShowCategoryBottomSheet) {
-        ModalBottomSheet(
+        KeepModalBottomSheet(
             sheetState = categoryBottomSheetState,
-            onDismissRequest = viewModel::hideCategoryBottomSheet
+            onDismissRequest = viewModel::hideCategoryBottomSheet,
         ) {
             CategoryBottomSheetContent(
                 storeSelectApps = uiState.selectedAppPackage,
@@ -129,7 +127,7 @@ fun HomeScreen(
     }
 
     if(uiState.isShowTimeBottomSheet) {
-        ModalBottomSheet(
+        KeepModalBottomSheet(
             sheetState = timeBottomSheetState,
             onDismissRequest = viewModel::hideTimeBottomSheet
         ) {
@@ -163,10 +161,13 @@ fun HomeScreen(
                         Icon(
                             painter = painterResource(id = R.drawable.baseline_format_list_bulleted_24),
                             contentDescription = null,
-                            tint = Color(0xFFFFA926)
+                            tint = KeepTheme.colors.primary,
                         )
                     }
                 },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = KeepTheme.colors.background,
+                )
             )
         },
         snackbarHost = {
@@ -181,7 +182,8 @@ fun HomeScreen(
                     }
                 )
             }
-        }
+        },
+        containerColor = KeepTheme.colors.background,
     ) { paddingValues ->
         Column(
             modifier = Modifier.padding(paddingValues)
@@ -228,7 +230,7 @@ fun HomeScreen(
                         ),
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
-                        val (image, message) = if (uiState.isKeep) R.drawable.app_icon to "지키자가 꺼졌어요" else R.drawable.disable_logo to "지키자가 켜졌어요"
+                        val (image, message) = if (uiState.isKeep) R.drawable.app_icon to stringResource(R.string.keep_turned_off) else R.drawable.disable_logo to stringResource(R.string.keep_turned_on)
                         Image(
                             modifier = Modifier
                                 .sizeIn(
@@ -261,8 +263,9 @@ fun HomeScreen(
                                     .size(40.dp)
                                     .background(
                                         shape = RoundedCornerShape(8.dp),
-                                        color = Color.DarkGray
+                                        color = KeepTheme.colors.onSecondary,
                                     )
+                                    .clip(RoundedCornerShape(8.dp))
                                     .clickable(
                                         onClick = viewModel::showTimeBottomSheet,
                                         enabled = !uiState.isKeep,

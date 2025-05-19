@@ -23,6 +23,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.R
 import kotlinx.coroutines.delay
 import java.time.LocalDateTime
@@ -76,6 +77,7 @@ fun CountDownContent(
                     text = time.toString(),
                     fontSize = 32.sp,
                     fontWeight = FontWeight.SemiBold,
+                    color = KeepTheme.colors.onSurfaceVariant,
                 )
             }
         }
@@ -83,6 +85,7 @@ fun CountDownContent(
         Text(
             text = stringResource(id = R.string.remaining_time),
             fontWeight = FontWeight.SemiBold,
+            color = KeepTheme.colors.onSurfaceVariant,
         )
     }
 }

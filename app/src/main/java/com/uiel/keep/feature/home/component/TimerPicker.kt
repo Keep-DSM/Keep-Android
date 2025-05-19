@@ -24,6 +24,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.Picker
 import com.uiel.keep.R
 import com.uiel.keep.rememberPickerState
@@ -60,7 +61,7 @@ fun TimerPicker(
                 .height(32.dp)
                 .background(
                     shape = RoundedCornerShape(8.dp),
-                    color = Color(0xFF282831),
+                    color =  KeepTheme.colors.tertiary,
                 )
         ) {
 
@@ -75,7 +76,7 @@ fun TimerPicker(
                 items = timePeriodsValues,
                 startIndex = if(LocalTime.now().isBefore(LocalTime.NOON)) 0 else 1,
                 visibleItemsCount = 3,
-                color = Color.White,
+                color = KeepTheme.colors.onSurfaceVariant,
                 textStyle = TextStyle(
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 18.sp,
@@ -89,7 +90,7 @@ fun TimerPicker(
                 items = hourValues,
                 startIndex = LocalTime.now().hour % 12,
                 visibleItemsCount = 7,
-                color = Color.White,
+                color = KeepTheme.colors.onSurfaceVariant,
                 textStyle = TextStyle(
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 18.sp,
@@ -103,7 +104,7 @@ fun TimerPicker(
                 items = minuteValues,
                 startIndex = LocalTime.now().minute,
                 visibleItemsCount = 7,
-                color = Color.White,
+                color = KeepTheme.colors.onSurfaceVariant,
                 textStyle = TextStyle(
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 18.sp,

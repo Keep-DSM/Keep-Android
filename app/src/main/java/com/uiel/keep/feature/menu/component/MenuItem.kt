@@ -19,6 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.R
 
 @Composable
@@ -41,14 +42,15 @@ fun MenuItem(
         )
         Spacer(modifier = Modifier.width(12.dp))
         Text(
-            text = title
+            text = title,
+            color = KeepTheme.colors.onSurfaceVariant,
         )
         Spacer(modifier = Modifier.weight(1f))
         Icon(
             modifier = Modifier.size(18.dp),
             painter = painterResource(R.drawable.round_arrow_forward_ios_24),
             contentDescription = null,
-            tint = Color.DarkGray,
+            tint = KeepTheme.colors.onTertiaryContainer,
         )
     }
 }

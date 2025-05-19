@@ -22,6 +22,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.R
 
 @Composable
@@ -34,7 +35,7 @@ fun CategoryButton(
     val moveIcon =
         if (enabled) R.drawable.round_arrow_forward_ios_24 else R.drawable.baseline_edit_off_24
     val textColor = animateColorAsState(
-        targetValue = if (enabled) Color.White else Color.Gray,
+        targetValue = if (enabled) KeepTheme.colors.surfaceVariant else KeepTheme.colors.onTertiaryContainer,
         label = ""
     ).value
     Row(
@@ -45,7 +46,7 @@ fun CategoryButton(
                 onClick = onClick,
                 enabled = enabled,
             )
-            .background(shape = RoundedCornerShape(12.dp), color = Color.DarkGray)
+            .background(shape = RoundedCornerShape(12.dp), color = KeepTheme.colors.tertiary)
             .padding(24.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -64,7 +65,7 @@ fun CategoryButton(
         Icon(
             painter = painterResource(id = moveIcon),
             contentDescription = null,
-            tint = Color.Gray,
+            tint = KeepTheme.colors.onTertiaryContainer,
         )
     }
 }

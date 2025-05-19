@@ -23,6 +23,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.uiel.kds.KeepButton
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.R
 
 @Composable
@@ -33,6 +34,7 @@ fun PermissionSettingScreen(
     val context = LocalContext.current
     Scaffold(
         modifier = modifier.fillMaxSize(),
+        containerColor = KeepTheme.colors.background,
     ) { paddingValues ->
         Column(
             modifier = Modifier
@@ -45,10 +47,12 @@ fun PermissionSettingScreen(
                 text = stringResource(id = R.string.accessibility_permission_required),
                 fontWeight = FontWeight.Bold,
                 fontSize = 22.sp,
+                color = KeepTheme.colors.onSurfaceVariant,
             )
             Spacer(modifier = Modifier.height(12.dp))
             Text(
-                text = stringResource(id = R.string.accessibility_permission_description)
+                text = stringResource(id = R.string.accessibility_permission_description),
+                color = KeepTheme.colors.surfaceVariant,
             )
             Row(
                 modifier = Modifier.padding(top = 36.dp),
@@ -60,7 +64,8 @@ fun PermissionSettingScreen(
                     contentDescription = null,
                 )
                 Text(
-                    text = stringResource(id = R.string.permission_usage_note)
+                    text = stringResource(id = R.string.permission_usage_note),
+                    color = KeepTheme.colors.surfaceVariant,
                 )
             }
             Spacer(modifier = Modifier.weight(1f))

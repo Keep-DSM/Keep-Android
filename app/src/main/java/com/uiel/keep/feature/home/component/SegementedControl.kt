@@ -1,6 +1,7 @@
 package com.uiel.keep.feature.home.component
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -24,6 +25,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.uiel.kds.theme.KeepTheme
 
 @Composable
 fun SegmentedControl(
@@ -44,9 +46,9 @@ fun SegmentedControl(
             .height(38.dp),
         colors = CardDefaults.cardColors(
             containerColor = if (selectedIndex.value == itemIndex.value) {
-                MaterialTheme.colorScheme.background
+                KeepTheme.colors.onTertiary
             } else {
-                Color(0xFF302F38)
+                KeepTheme.colors.tertiaryContainer
             }
         ),
         shape = RoundedCornerShape(cornerRadius)
@@ -54,7 +56,7 @@ fun SegmentedControl(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color(0xFF302F38)),
+                .background(KeepTheme.colors.onTertiary),
             horizontalArrangement = Arrangement.Center
         ) {
             items.forEachIndexed { index, item ->
@@ -69,11 +71,11 @@ fun SegmentedControl(
                     },
                     colors = CardDefaults.cardColors(
                         containerColor = if (selectedIndex.value == index) {
-                            Color.Gray
+                            KeepTheme.colors.onSecondary
                         } else {
-                            Color(0xFF302F38)
+                            KeepTheme.colors.onTertiary
                         },
-                        contentColor = Color.White,
+                        contentColor = KeepTheme.colors.onSurfaceVariant,
                     ),
                     shape = when (index) {
                         0 -> RoundedCornerShape(
@@ -103,7 +105,7 @@ fun SegmentedControl(
                             text = item,
                             textAlign = TextAlign.Center,
                             fontSize = 12.sp,
-                            fontWeight = FontWeight.Bold,
+                            fontWeight = FontWeight.SemiBold,
                         )
                     }
                 }

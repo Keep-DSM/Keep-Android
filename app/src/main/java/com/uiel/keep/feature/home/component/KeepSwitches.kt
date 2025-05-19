@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.uiel.kds.theme.KeepTheme
 
 @Composable
 fun KeepSwitch(
@@ -32,13 +33,13 @@ object KeepSwitchDefaults {
     @Composable
     fun colors(
         checkedThumbColor: Color = Color.White,
-        checkedTrackColor: Color = Color(0xFFFFA926),
+        checkedTrackColor: Color = KeepTheme.colors.primary,
         checkedBorderColor: Color = Color.Transparent,
-        checkedIconColor: Color = Color(0xFFFFA926),
+        checkedIconColor: Color = KeepTheme.colors.primary,
         uncheckedThumbColor: Color = Color.White,
-        uncheckedTrackColor: Color = Color.DarkGray,
+        uncheckedTrackColor: Color = KeepTheme.colors.tertiary,
         uncheckedBorderColor: Color = Color.Transparent,
-        uncheckedIconColor: Color = Color.DarkGray,
+        uncheckedIconColor: Color = KeepTheme.colors.tertiary,
     ): SwitchColors = SwitchDefaults.colors(
         checkedThumbColor = checkedThumbColor,
         checkedTrackColor = checkedTrackColor,

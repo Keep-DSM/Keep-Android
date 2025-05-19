@@ -25,6 +25,7 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.uiel.kds.KeepButton
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.R
 
 private fun ManagedActivityResultLauncher<String, Boolean>.requestNotificationPermission() {
@@ -45,7 +46,10 @@ fun NotificationSettingScreen(
         LottieCompositionSpec.RawRes(R.raw.notification_bell)
     )
 
-    Scaffold(modifier = modifier.fillMaxSize()) { paddingValues ->
+    Scaffold(
+        modifier = modifier.fillMaxSize(),
+        containerColor = KeepTheme.colors.background,
+    ) { paddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -58,10 +62,12 @@ fun NotificationSettingScreen(
                 fontWeight = FontWeight.Bold,
                 lineHeight = 28.sp,
                 fontSize = 22.sp,
+                color = KeepTheme.colors.onSurfaceVariant,
             )
             Spacer(modifier = Modifier.height(12.dp))
             Text(
-                text = stringResource(id = R.string.notification_habit_message)
+                text = stringResource(id = R.string.notification_habit_message),
+                color = KeepTheme.colors.surfaceVariant,
             )
             LottieAnimation(
                 modifier = Modifier

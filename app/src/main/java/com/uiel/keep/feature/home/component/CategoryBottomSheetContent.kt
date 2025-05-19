@@ -19,6 +19,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -42,6 +43,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.graphics.drawable.toBitmap
+import com.uiel.kds.KeepCheckbox
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.R
 import com.uiel.keep.model.AppInfo
 
@@ -68,6 +71,7 @@ fun CategoryBottomSheetContent(
             text = stringResource(R.string.activity_selection),
             fontWeight = FontWeight.Bold,
             fontSize = 32.sp,
+            color = KeepTheme.colors.onSurfaceVariant,
         )
         Spacer(modifier = Modifier.height(12.dp))
         SearchTextField(
@@ -80,7 +84,7 @@ fun CategoryBottomSheetContent(
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(1f)
-                .background(shape = RoundedCornerShape(12.dp), color = Color.DarkGray),
+                .background(shape = RoundedCornerShape(12.dp), color = KeepTheme.colors.secondary),
         ) {
             if (searchContent.isEmpty()) {
                 item {
@@ -89,7 +93,7 @@ fun CategoryBottomSheetContent(
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
-                        Checkbox(
+                        KeepCheckbox(
                             checked = isSelectAll,
                             onCheckedChange = { checked ->
                                 isSelectAll = checked
@@ -108,6 +112,7 @@ fun CategoryBottomSheetContent(
                         )
                         Text(
                             text = stringResource(R.string.all_apps),
+                            color = KeepTheme.colors.onSurfaceVariant,
                         )
                     }
                 }
@@ -146,17 +151,16 @@ fun CategoryBottomSheetContent(
                 .padding(top = 18.dp, bottom = 24.dp),
             onClick = { onComplete(selectedAppPackages) },
             shape = RoundedCornerShape(12.dp),
-            colors = ButtonColors(
-                containerColor = Color(0xFFFE9E0B),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = KeepTheme.colors.primary,
                 contentColor = Color.White,
-                disabledContainerColor = Color(0xFFFE9E0B),
-                disabledContentColor = Color.White,
             ),
             contentPadding = PaddingValues(vertical = 18.dp)
         ) {
             Text(
                 text = stringResource(R.string.selection_complete),
                 fontWeight = FontWeight.Bold,
+                fontSize = 18.sp,
             )
         }
     }

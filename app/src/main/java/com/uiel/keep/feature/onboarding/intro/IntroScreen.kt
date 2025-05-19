@@ -17,6 +17,7 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.uiel.kds.KeepButton
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.R
 
 @Composable
@@ -29,7 +30,8 @@ fun IntroScreen(
     )
 
     Scaffold(
-        modifier = modifier.fillMaxSize()
+        modifier = modifier.fillMaxSize(),
+        containerColor = KeepTheme.colors.background,
     ) { paddingValues ->
         Column(
             modifier = Modifier
@@ -42,6 +44,7 @@ fun IntroScreen(
                 text = stringResource(id = R.string.intro_text),
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 18.sp,
+                color = KeepTheme.colors.onSurfaceVariant,
             )
             LottieAnimation(
                 modifier = Modifier.fillMaxSize().weight(1f),

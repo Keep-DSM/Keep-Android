@@ -22,6 +22,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.R
 
 @Composable
@@ -43,7 +44,7 @@ fun SearchTextField(
     Surface(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(12.dp),
-        color = Color.DarkGray,
+        color = KeepTheme.colors.tertiary,
     ) {
         BasicTextField(
             modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp),
@@ -52,7 +53,7 @@ fun SearchTextField(
             singleLine = singleLine,
             textStyle = TextStyle(
                 fontSize = 16.sp,
-                color = Color.White,
+                color = KeepTheme.colors.onSurfaceVariant,
             )
         ) { innerTextField ->
             Row(
@@ -62,7 +63,7 @@ fun SearchTextField(
                 Icon(
                     painter = painterResource(id = R.drawable.outline_search_24),
                     contentDescription = null,
-                    tint = Color.Gray,
+                    tint = KeepTheme.colors.onSurface,
                 )
                 Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.CenterStart) {
                     innerTextField()
@@ -71,7 +72,7 @@ fun SearchTextField(
                             modifier = Modifier.alpha(hintAlpha),
                             text = hint,
                             fontSize = 16.sp,
-                            color = Color.Gray,
+                            color = KeepTheme.colors.onSurface,
                         )
                     }
                 }

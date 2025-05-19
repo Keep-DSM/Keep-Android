@@ -28,6 +28,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.Picker
 import com.uiel.keep.R
 import com.uiel.keep.rememberPickerState
@@ -53,7 +54,7 @@ fun TimeBottomSheetContent(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 36.dp)
-                .background(shape = RoundedCornerShape(8.dp), color = Color(0xFF18171E)),
+                .background(shape = RoundedCornerShape(8.dp), color = KeepTheme.colors.secondary),
         ) {
             Row(
                 modifier = Modifier.padding(12.dp),
@@ -61,20 +62,20 @@ fun TimeBottomSheetContent(
             ) {
                 Text(
                     text = stringResource(R.string.end_time),
-                    fontWeight = FontWeight.SemiBold,
+                    color = KeepTheme.colors.onSurfaceVariant,
                 )
                 Spacer(modifier = Modifier.weight(1f))
                 if(LocalTime.now() > blockTime) {
                     Text(
                         modifier = Modifier.padding(end = 4.dp),
                         text = stringResource(R.string.next_day),
-                        color = Color(0xFFFE9E0B),
-                        fontWeight = FontWeight.SemiBold
+                        color = KeepTheme.colors.primary,
+                        fontWeight = FontWeight.SemiBold,
                     )
                 }
                 Text(
                     text = stringResource(R.string.lock_time,blockTime.hour,blockTime.minute),
-                    color = Color(0xFFFE9E0B),
+                    color = KeepTheme.colors.primary,
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -83,7 +84,7 @@ fun TimeBottomSheetContent(
                     .fillMaxWidth()
                     .padding(horizontal = 8.dp),
                 thickness = 1.dp,
-                color = Color.DarkGray,
+                color = KeepTheme.colors.tertiary,
             )
             SegmentedControl(
                 modifier = Modifier
@@ -108,7 +109,7 @@ fun TimeBottomSheetContent(
         Spacer(modifier = Modifier.weight(1f))
         Text(
             text = stringResource(R.string.lock_message),
-            color = Color.LightGray,
+            color = KeepTheme.colors.surface,
         )
         val hour = blockTime.minusHours(LocalTime.now().hour.toLong()).hour
         val minute = blockTime.minusMinutes(LocalTime.now().minute.toLong()).minute
@@ -120,9 +121,9 @@ fun TimeBottomSheetContent(
             contentPadding = PaddingValues(vertical = 12.dp),
             enabled = hour != 0 || minute != 0,
             colors = ButtonColors(
-                containerColor = Color(0xFFFFA926),
+                containerColor = KeepTheme.colors.primary,
                 contentColor = Color.White,
-                disabledContainerColor = Color.DarkGray,
+                disabledContainerColor = KeepTheme.colors.tertiary,
                 disabledContentColor = Color.White,
             ),
             onClick = onLockClick,

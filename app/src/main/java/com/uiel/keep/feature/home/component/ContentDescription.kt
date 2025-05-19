@@ -12,6 +12,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.R
 
 @Composable
@@ -33,12 +34,12 @@ fun ContentDescription(
                 text = stringResource(R.string.keep_off_status),
                 fontSize = 18.sp,
                 fontWeight = FontWeight.SemiBold,
-                color = Color.Red,
+                color = KeepTheme.colors.error,
             )
         }
         Text(
             text = stringResource(description),
-            color = Color.Gray,
+            color = KeepTheme.colors.onSurface,
         )
     }
 }

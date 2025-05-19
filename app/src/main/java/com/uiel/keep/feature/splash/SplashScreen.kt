@@ -1,6 +1,7 @@
 package com.uiel.keep.feature.splash
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,6 +13,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.R
 import org.orbitmvi.orbit.compose.collectSideEffect
 
@@ -33,7 +35,9 @@ fun SplashScreen(
     }
 
     Box(
-        modifier = modifier.fillMaxSize(),
+        modifier = modifier
+            .fillMaxSize()
+            .background(color = KeepTheme.colors.background),
         contentAlignment = Alignment.Center,
     ) {
         Image(

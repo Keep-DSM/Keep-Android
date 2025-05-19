@@ -28,6 +28,8 @@ import com.uiel.keep.feature.home.component.CategoryBottomSheetContent
 import kotlinx.coroutines.launch
 import org.orbitmvi.orbit.compose.collectAsState
 import androidx.compose.ui.res.stringResource
+import com.uiel.kds.KeepModalBottomSheet
+import com.uiel.kds.theme.KeepTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -46,7 +48,7 @@ fun SelectAppScreen(
     val coroutineScope = rememberCoroutineScope()
 
     if(uiState.isShowCategoryBottomSheet) {
-        ModalBottomSheet(
+        KeepModalBottomSheet(
             sheetState = categoryBottomSheetState,
             onDismissRequest = viewModel::hideCategoryBottomSheet,
         ) {
@@ -68,7 +70,8 @@ fun SelectAppScreen(
     }
 
     Scaffold(
-        modifier = modifier.fillMaxSize()
+        modifier = modifier.fillMaxSize(),
+        containerColor = KeepTheme.colors.background,
     ) { paddingValues ->
         Column(
             modifier = Modifier
@@ -82,11 +85,12 @@ fun SelectAppScreen(
                 fontWeight = FontWeight.SemiBold,
                 lineHeight = 28.sp,
                 fontSize = 22.sp,
+                color = KeepTheme.colors.onSurfaceVariant,
             )
             Text(
                 modifier = Modifier.padding(top = 14.dp),
                 text = stringResource(id = R.string.app_lock_info),
-                color = Color.Gray,
+                color = KeepTheme.colors.surfaceVariant,
             )
             LottieAnimation(
                 modifier = modifier.weight(1f),

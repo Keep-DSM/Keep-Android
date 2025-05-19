@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.uiel.kds.RotatingCircleGradient
+import com.uiel.kds.theme.KeepTheme
 import com.uiel.keep.R
 import com.uiel.keep.feature.home.component.CategoryButton
 import com.uiel.keep.feature.home.component.TimerContent
@@ -54,7 +55,8 @@ fun LockScreen(
     }
 
     Scaffold(
-        modifier = modifier.fillMaxSize()
+        modifier = modifier.fillMaxSize(),
+        containerColor = KeepTheme.colors.background,
     ) { paddingValues ->
         Column(modifier = Modifier
             .fillMaxSize()
@@ -100,14 +102,14 @@ fun LockScreen(
             ) {
                 val lockTime = uiState.lockTime
                 Text(
-                    text = stringResource(id = R.string.lock_screen_off_message),
+                    text = stringResource(id = R.string.keep_on_status),
                     fontSize = 18.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color.Red,
+                    color = KeepTheme.colors.onSurfaceVariant,
                 )
                 Text(
                     text = stringResource(id = R.string.lock_screen_unavailable_message, lockTime.hour, lockTime.minute),
-                    color = Color.Gray,
+                    color = KeepTheme.colors.surfaceVariant,
                 )
             }
         }
