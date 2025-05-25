@@ -162,7 +162,7 @@ fun CategoryBottomSheetContent(
 
 private fun getInstalledApps(packageManager: PackageManager): List<AppInfo> {
     val apps = packageManager.getInstalledApplications(PackageManager.GET_META_DATA)
-        .filter { packageManager.getLaunchIntentForPackage(it.packageName) != null && it.packageName != "com.uiel.keep" }
+        .filter { packageManager.getLaunchIntentForPackage(it.packageName) != null && it.packageName != "com.uiery.keep" }
     return apps.map { app ->
         AppInfo(
             packageName = app.packageName,
