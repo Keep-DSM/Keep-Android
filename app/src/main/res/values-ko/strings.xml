@@ -42,4 +42,8 @@
     <string name="block_screen_title">지키자가 앱 사용을\n막고 있어요</string>
     <string name="block_screen_message">%1$s은(는) 제한되었기 때문에 사용할 수 없습니다.</string>
     <string name="block_screen_close">닫기</string>
+    <string name="permission_dialog_title">접근성 권한이 필요해요</string>
+    <string name="permission_dialog_message">이 권한은 사용자의 앱 사용을 감지하여 특정 앱을 잠글 수 있도록 도와줘요.\n제공하신 권한은 앱 잠금 외의 다른 용도로는 사용되지 않으며, 수집된 정보는 외부로 전송되지 않습니다.</string>
+    <string name="permission_dialog_confirm">설정으로 이동</string>
+    <string name="permission_dialog_cancel">취소</string>
 </resources>

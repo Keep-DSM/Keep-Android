@@ -43,4 +43,8 @@
     <string name="block_screen_title">Keep bloque l\'utilisation de l\'application</string>
     <string name="block_screen_message">%1$s ne peut pas être utilisé car il est restreint.</string>
     <string name="block_screen_close">Fermer</string>
+    <string name="permission_dialog_title">Autorisation d\'accessibilité requise</string>
+    <string name="permission_dialog_message">Cette autorisation aide à détecter l\'utilisation de l\'application pour bloquer des applications spécifiques.\nLes informations collectées ne sont pas utilisées à d\'autres fins que le blocage des applications et ne sont pas transmises à l\'extérieur.</string>
+    <string name="permission_dialog_confirm">Aller aux paramètres</string>
+    <string name="permission_dialog_cancel">Annuler</string>
 </resources> 

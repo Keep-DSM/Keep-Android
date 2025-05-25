@@ -43,4 +43,8 @@
     <string name="block_screen_title">Keepがアプリの使用を\nブロックしています</string>
     <string name="block_screen_message">%1$sは制限されているため使用できません。</string>
     <string name="block_screen_close">閉じる</string>
+    <string name="permission_dialog_title">アクセシビリティの許可が必要です</string>
+    <string name="permission_dialog_message">この許可は、特定のアプリをブロックするためにアプリの使用を検出するのに役立ちます。\n収集された情報はアプリのブロック以外の目的では使用されず、外部に送信されることはありません。</string>
+    <string name="permission_dialog_confirm">設定に移動</string>
+    <string name="permission_dialog_cancel">キャンセル</string>
 </resources> 

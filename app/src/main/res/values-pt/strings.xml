@@ -43,4 +43,8 @@
     <string name="am">AM</string>
     <string name="pm">PM</string>
     <string name="category_selected">%1$d aplicativos e categorias web selecionados</string>
+    <string name="permission_dialog_title">Permissão de acessibilidade necessária</string>
+    <string name="permission_dialog_message">Esta permissão ajuda a detectar o uso do aplicativo para bloquear aplicativos específicos.\nAs informações coletadas não são usadas para outros fins além do bloqueio de aplicativos e não são transmitidas externamente.</string>
+    <string name="permission_dialog_confirm">Ir para configurações</string>
+    <string name="permission_dialog_cancel">Cancelar</string>
 </resources> 

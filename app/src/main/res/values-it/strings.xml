@@ -43,4 +43,8 @@
     <string name="am">AM</string>
     <string name="pm">PM</string>
     <string name="category_selected">%1$d applicazioni e categorie web selezionate</string>
+    <string name="permission_dialog_title">Richiesto permesso di accessibilità</string>
+    <string name="permission_dialog_message">Questo permesso aiuta a rilevare l\'uso dell\'app per bloccare app specifiche.\nLe informazioni raccolte non vengono utilizzate per scopi diversi dal blocco delle app e non vengono trasmesse all\'esterno.</string>
+    <string name="permission_dialog_confirm">Vai alle impostazioni</string>
+    <string name="permission_dialog_cancel">Annulla</string>
 </resources> 

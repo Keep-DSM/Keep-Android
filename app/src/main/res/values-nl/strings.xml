@@ -43,4 +43,8 @@
     <string name="block_screen_title">Keep blokkeert het gebruik van de app</string>
     <string name="block_screen_message">%1$s kan niet worden gebruikt omdat het beperkt is.</string>
     <string name="block_screen_close">Sluiten</string>
+    <string name="permission_dialog_title">Toegankelijkheidsmachtiging vereist</string>
+    <string name="permission_dialog_message">Deze machtiging helpt bij het detecteren van app-gebruik om specifieke apps te blokkeren.\nDe verzamelde informatie wordt niet gebruikt voor andere doeleinden dan het blokkeren van apps en wordt niet extern verzonden.</string>
+    <string name="permission_dialog_confirm">Ga naar instellingen</string>
+    <string name="permission_dialog_cancel">Annuleren</string>
 </resources> 

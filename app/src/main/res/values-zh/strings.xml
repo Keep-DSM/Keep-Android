@@ -43,4 +43,8 @@
     <string name="block_screen_title">Keep正在阻止应用使用</string>
     <string name="block_screen_message">%1$s因受限制而无法使用。</string>
     <string name="block_screen_close">关闭</string>
+    <string name="permission_dialog_title">需要无障碍权限</string>
+    <string name="permission_dialog_message">此权限有助于检测应用程序使用情况以阻止特定应用程序。\n收集的信息仅用于阻止应用程序，不会用于其他目的，也不会对外传输。</string>
+    <string name="permission_dialog_confirm">前往设置</string>
+    <string name="permission_dialog_cancel">取消</string>
 </resources> 

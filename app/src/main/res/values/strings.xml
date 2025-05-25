@@ -42,4 +42,8 @@
     <string name="block_screen_title">Keep is blocking app usage</string>
     <string name="block_screen_message">%1$s cannot be used because it is restricted.</string>
     <string name="block_screen_close">Close</string>
+    <string name="permission_dialog_title">Accessibility Permission Required</string>
+    <string name="permission_dialog_message">This permission helps detect app usage to block specific apps.\nThe information collected is not used for any purpose other than app blocking and is not transmitted externally.</string>
+    <string name="permission_dialog_confirm">Go to Settings</string>
+    <string name="permission_dialog_cancel">Cancel</string>
 </resources>

@@ -43,4 +43,8 @@
     <string name="block_screen_title">Keep блокирует использование приложения</string>
     <string name="block_screen_message">%1$s нельзя использовать, так как он ограничен.</string>
     <string name="block_screen_close">Закрыть</string>
+    <string name="permission_dialog_title">Требуется разрешение на доступность</string>
+    <string name="permission_dialog_message">Это разрешение помогает обнаруживать использование приложения для блокировки определенных приложений.\nСобранная информация не используется для других целей, кроме блокировки приложений, и не передается внешним образом.</string>
+    <string name="permission_dialog_confirm">Перейти к настройкам</string>
+    <string name="permission_dialog_cancel">Отмена</string>
 </resources> 

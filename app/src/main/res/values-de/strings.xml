@@ -43,4 +43,8 @@
     <string name="am">Vormittag</string>
     <string name="pm">Nachmittag</string>
     <string name="category_selected">%1$d Apps &amp; Web-Kategorien ausgewählt</string>
+    <string name="permission_dialog_title">Zugänglichkeitsberechtigung erforderlich</string>
+    <string name="permission_dialog_message">Diese Berechtigung hilft, die App-Nutzung zu erkennen, um bestimmte Apps zu blockieren.\nDie gesammelten Informationen werden nicht für andere Zwecke als das Blockieren von Apps verwendet und nicht extern übertragen.</string>
+    <string name="permission_dialog_confirm">Zu den Einstellungen</string>
+    <string name="permission_dialog_cancel">Abbrechen</string>
 </resources> 
