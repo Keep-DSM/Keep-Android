@@ -15,6 +15,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -26,6 +30,7 @@ import androidx.compose.ui.unit.sp
 import com.uiery.kds.KeepButton
 import com.uiery.kds.theme.KeepTheme
 import com.uiery.keep.R
+import com.uiery.keep.feature.onboarding.permission.component.PermissionSettingDialog
 
 @Composable
 fun PermissionSettingScreen(
@@ -33,6 +38,17 @@ fun PermissionSettingScreen(
     onNavigateNotificationSetting: () -> Unit,
 ) {
     val context = LocalContext.current
+    var openAlertDialog by remember { mutableStateOf(false) }
+
+    if(openAlertDialog) {
+        PermissionSettingDialog(
+            onDismissRequest = { openAlertDialog = false},
+            onConfirmation = {
+                openAlertDialog = false
+                requestAccessibilityPermission(context)
+            },
+        )
+    }
     Scaffold(
         modifier = modifier.fillMaxSize(),
         containerColor = KeepTheme.colors.background,
@@ -77,7 +93,7 @@ fun PermissionSettingScreen(
                     if(hasAccessibilityPermission(context)) {
                         onNavigateNotificationSetting()
                     } else {
-                        requestAccessibilityPermission(context)
+                        openAlertDialog = true
                     }
                 },
             )
