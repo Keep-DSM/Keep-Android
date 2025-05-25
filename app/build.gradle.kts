@@ -20,15 +20,15 @@ val properties = Properties()
 properties.load(rootProject.file("./local.properties").inputStream())
 
 android {
-    namespace = "com.uiel.keep"
+    namespace = "com.uiery.keep"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.uiel.keep"
+        applicationId = "com.uiery.keep"
         minSdk = 28
         targetSdk = 34
-        versionCode = 4
-        versionName = "0.1.0"
+        versionCode = 2
+        versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -64,6 +64,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
 
         debug {
