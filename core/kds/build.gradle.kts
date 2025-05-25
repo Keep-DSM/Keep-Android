@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.uiel.kds"
+    namespace = "com.uiery.kds"
     compileSdk = 35
 
     defaultConfig {
@@ -42,4 +42,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.accompanist.systemuicontroller)
 }
