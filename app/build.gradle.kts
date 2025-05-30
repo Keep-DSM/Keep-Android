@@ -14,6 +14,7 @@ plugins {
     alias(libs.plugins.gms.google.services)
     alias(libs.plugins.google.devtools.ksp)
     id("com.datadoghq.dd-sdk-android-gradle-plugin")
+    id("androidx.room")
 }
 
 val properties = Properties()
@@ -51,9 +52,19 @@ android {
         create("dev") {
             dimension = "server"
             //applicationIdSuffix = ".dev"
+            buildConfigField(
+                type = "String",
+                name = "BASE_URL",
+                value = properties.getProperty("BASE_URL_DEV","\"\"")
+            )
         }
         create("prod") {
             dimension = "server"
+            buildConfigField(
+                type = "String",
+                name = "BASE_URL",
+                value = properties.getProperty("BASE_URL_PROD","\"\"")
+            )
         }
     }
 
@@ -89,6 +100,9 @@ android {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
+    }
+    room {
+        schemaDirectory("$projectDir/schemas")
     }
 }
 
@@ -138,6 +152,15 @@ dependencies {
     implementation("com.datadoghq:dd-sdk-android-session-replay:2.19.2")
     implementation("com.datadoghq:dd-sdk-android-session-replay-material:2.19.2")
     implementation("com.datadoghq:dd-sdk-android-session-replay-compose:2.19.2")
+
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.12.0"))
+    implementation("com.squareup.okhttp3:logging-interceptor")
+    implementation("com.squareup.retrofit2:retrofit:3.0.0")
+    implementation("com.squareup.retrofit2:converter-gson:3.0.0")
+
+    implementation("androidx.room:room-runtime:2.7.1")
+    ksp("androidx.room:room-compiler:2.7.1")
 
     implementation(project(":core:kds"))
 }
