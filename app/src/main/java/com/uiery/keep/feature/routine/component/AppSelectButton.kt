@@ -25,6 +25,7 @@ import com.uiery.keep.R
 @Composable
 internal fun AppSelectButton(
     modifier: Modifier = Modifier,
+    selectApps: Set<String>,
     onClick: () -> Unit,
 ) {
     Row(
@@ -39,14 +40,15 @@ internal fun AppSelectButton(
             .padding(horizontal = 24.dp, vertical = 20.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
+        val (image, tile) = if(selectApps.isEmpty()) R.drawable.ic_question_face to "잠글 앱을 선택해 주세요." else R.drawable.shield to "${selectApps.size}개의 앱이 선택됨"
         Image(
             modifier = Modifier.size(16.dp),
-            painter = painterResource(R.drawable.ic_question_face),
+            painter = painterResource(image),
             contentDescription = null,
         )
         Spacer(modifier = Modifier.width(4.dp))
         Text(
-            text = "잠글 앱을 선택해 주세요.",
+            text = tile,
             color = KeepTheme.colors.onSurfaceVariant,
             fontWeight = FontWeight.SemiBold,
         )
